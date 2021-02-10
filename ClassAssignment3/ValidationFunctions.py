@@ -13,16 +13,16 @@ def validate_age(age):
         ageVal = float(age)
         ageStr = str(age)
         if ageVal < 0 or ageVal > 99:
-            return False
+            return None
         if len(ageStr) != 2:
-            return False
-        return True
+            return None
+        return age
     except ValueError:
-        return False
+        return None
 
-def validate_existence(value):
+def validate_existence(ID):
     """"
-    Description: Validate that every record has a value and is not empty
+    Description: Validate that every record has an integer value Crash ID and is not empty
 
     Args: (int) Value to be validated
 
@@ -32,12 +32,10 @@ def validate_existence(value):
     """
 
     try:
-        valueStr = str(value)
-        if valueStr == 'nan':
-            return False
-        return True
+        intID = int(ID)
+        return ID
     except ValueError:
-        return False
+        return None
 
 def validate_crash_day_month(date):
     """"
@@ -57,10 +55,10 @@ def validate_crash_day_month(date):
             dateStr = '0' + dateStr
             return dateStr
         if len(dateStr) != 2:
-            return False
+            return None
         return date
     except ValueError:
-        return False
+        return None
 
 def validate_year(year):
     """"
@@ -76,10 +74,10 @@ def validate_year(year):
     try:
         yearStr = str(year)
         if len(yearStr) != 4:
-            return False
+            return None
         return year
     except ValueError:
-        return False
+        return None
 
 def validate_date(date):
     """"
@@ -95,8 +93,8 @@ def validate_date(date):
     try:
         dateStr = str(date)
         if len(dateStr) != 8:
-            return False
-        return True
+            return None
+        return date
     except ValueError:
-        return False
+        return None
 
