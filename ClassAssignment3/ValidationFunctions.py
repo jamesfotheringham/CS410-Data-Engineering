@@ -5,8 +5,8 @@ def validate_age(age):
     Arguments: (int) age to be validated
 
     Returns:
-        True if age is valid
-        False if age is not valid
+        Original value if age is valid
+        None if age is not valid
     """
 
     try:
@@ -27,8 +27,8 @@ def validate_existence(ID):
     Args: (int) Value to be validated
 
     Returns:
-        True if exists
-        False if does not exist
+        Original value if exists
+        None if does not exist
     """
 
     try:
@@ -46,7 +46,7 @@ def validate_crash_day_month(date):
     Returns:
         Original value if form is correct,
         DD or MM if the form is D or M, 
-        False if date is incorrect value
+        None if date is incorrect value
     """
 
     try:
@@ -68,7 +68,7 @@ def validate_year(year):
 
     Returns:
         Original value if year is of the form YYYY
-        False if year is incorrect value
+        None if year is incorrect value
     """
 
     try:
@@ -86,8 +86,8 @@ def validate_date(date):
     Args: (int) Date to be validated
 
     Returns:
-        True if year is of the form YYYY
-        False if year is incorrect value
+        Original value if year is of the form YYYY
+        None if year is incorrect value
     """
 
     try:
